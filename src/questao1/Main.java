@@ -1,6 +1,6 @@
 package questao1;
 import questao1.entidades.*;
-
+import questao1.controladores.*;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -13,9 +13,8 @@ public class Main {
 
         Scanner leitor = new Scanner(System.in);
         Scanner leitorInt = new Scanner(System.in);
-        DecimalFormat formatador = new DecimalFormat("0.00");
 
-
+        Controlador adicionadorEntidade = new Controlador(); // coloca dentro da lista as cartas
 
         int op;
         try {
@@ -44,17 +43,17 @@ public class Main {
                             case "criatura":
                                 //System.out.println("------ cadastro de cartas do tipo criatura ---------");
                                 Criatura novaCriatura = new Criatura(nome, custo, raridade, tipo,0,0,1);
-                                novaCriatura.adicionarCarta(novaCriatura, cartas);
+                                adicionadorEntidade.adicionarCarta(novaCriatura, cartas);
                                 break;
                             case "feitico":
                                 //System.out.println("------ cadastro de cartas do tipo feitico ---------");
                                 Feitico novoFeitico = new Feitico(nome, custo, raridade, tipo,0,0,1);
-                                novoFeitico.adicionarCarta(novoFeitico, cartas);
+                                adicionadorEntidade.adicionarCarta(novoFeitico, cartas);
                                 break;
                             case "encantamento":
                                 //System.out.println("------ cadastro de cartas do tipo encantamento ---------");
                                 Encantamento novoEncantamento = new Encantamento(nome, custo, raridade, tipo,0,0,1);
-                                novoEncantamento.adicionarCarta(novoEncantamento, cartas);
+                                adicionadorEntidade.adicionarCarta(novoEncantamento, cartas);
                                 break;
                         }
                         break;
@@ -106,6 +105,9 @@ public class Main {
                             System.out.println("foi adicionada na troca uma carta não cadastrada.");
                         }
 
+                        for(int i =0 ; i<trocasCadastradas.size(); i++){
+                            System.out.println("Temos essa troca cadastradada " + trocasCadastradas.get(i).toString());
+                        }
                         break;
                     case 9:
                         System.out.println("O JOGO DE CARTAS POSSUI AS SEGUINTES REGRAS: \n" +

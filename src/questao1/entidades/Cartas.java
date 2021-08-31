@@ -83,12 +83,6 @@ public abstract class Cartas implements Comparable<Cartas>, Organizador{
     }
 
 
-    public abstract void adicionarCarta(Cartas carta, LinkedList<Cartas> listaCartas);
-
-    public abstract String agirCarta(Cartas carta);
-
-
-
 
     @Override
     public String toString() {
@@ -129,8 +123,6 @@ public abstract class Cartas implements Comparable<Cartas>, Organizador{
             int opCusto = leitorInt.nextInt();
             cartasTrocas.get(op).setCusto(opCusto);
             System.out.println("Agora a carta tem as seguintes caracteristicas: " + cartasTrocas.get(op).toString());
-
-
         }
     }
 
