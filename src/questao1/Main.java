@@ -181,20 +181,19 @@ public class Main {
         Collections.sort(cartasAux, Collections.reverseOrder());
         //cartasAux.sort();
 
-            for(int j=0; j<cartas.size(); ++j){
-                for(int k=1 ; k<cartas.size(); ++k){
-                    if(cartasAux.get(j) == cartasAux.get(k)){
-                        cartasRepetidas.add(cartasAux.get(k));
-                        cartasAux.get(j).setQtd(cartasAux.get(j).getQtd()+1);
+            for(int i=0; i<cartas.size(); i++){
+                for(int j=i+1 ; j<cartas.size(); j++){
+                    if(cartasAux.get(i).getNome().equalsIgnoreCase(cartasAux.get(j).getNome())
+                            && cartasAux.get(i).getTipo().equalsIgnoreCase(cartasAux.get(j).getTipo())){
+                        cartasRepetidas.add(cartasAux.get(j));
+                        cartasAux.get(i).setQtd(cartasAux.get(i).getQtd()+1);
                     }
                 }
             }
 
         System.out.println("No total, foram encontradas " + cartasRepetidas.size() + " cartas repetidas!\n");
         for(int i=0; i<cartasRepetidas.size(); i++){
-            if(cartasRepetidas.get(i).getQtd()>1){
                 System.out.println((i+1) + " -> " + cartasRepetidas.get(i).toString() + " ");
-            }
         }
         cartasRepetidas.clear();
         cartasAux.clear();
