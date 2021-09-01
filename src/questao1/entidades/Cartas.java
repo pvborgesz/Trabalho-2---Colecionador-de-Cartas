@@ -1,10 +1,8 @@
 package questao1.entidades;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.TreeSet;
+
 
 public abstract class Cartas implements Comparable<Cartas>, Organizador{
     protected String nome;
@@ -82,11 +80,9 @@ public abstract class Cartas implements Comparable<Cartas>, Organizador{
         this.tipo = tipo;
     }
 
-
-
     @Override
     public String toString() {
-        return ": " +
+        return "->  " +
                 "nome: " + nome + ' ' +
                 ", custo: " + custo +
                 ", raridade " + raridade + ' ' +
@@ -114,7 +110,6 @@ public abstract class Cartas implements Comparable<Cartas>, Organizador{
         }
         System.out.println("A carta que você deseja trocar está cadastrada? (1 - Sim\n2-Nao)");
         String opTroca = leitor.nextLine();
-
         if (opTroca.equalsIgnoreCase("1")){
             System.out.println("digite o indice da carta que você deseja trocar: ");
             int op = leitorInt.nextInt();
@@ -125,8 +120,4 @@ public abstract class Cartas implements Comparable<Cartas>, Organizador{
             System.out.println("Agora a carta tem as seguintes caracteristicas: " + cartasTrocas.get(op).toString());
         }
     }
-
-
-
-
 }
