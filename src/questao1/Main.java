@@ -194,7 +194,7 @@ public class Main {
                             }
                             if(dueloJogador1.get(i).getTipo().equalsIgnoreCase("feitico")){
                                 feiticoDuelo1 = (Feitico) dueloJogador1.get(i);
-                            }else if(dueloJogador1.get(i).getTipo().equalsIgnoreCase("encantamento")){
+                            } if(dueloJogador1.get(i).getTipo().equalsIgnoreCase("encantamento")){
                                 encantamentoDuelo1 = (Encantamento) dueloJogador1.get(i);
                             }
                         }
@@ -203,9 +203,9 @@ public class Main {
                             if(dueloJogador2.get(i).getTipo().equalsIgnoreCase("criatura")){
                                 criaturaDuelo2 = (Criatura) dueloJogador2.get(i);
                             }
-                            else if(dueloJogador2.get(i).getTipo().equalsIgnoreCase("feitico")){
+                             if(dueloJogador2.get(i).getTipo().equalsIgnoreCase("feitico")){
                                 feiticoDuelo2 = (Feitico) dueloJogador2.get(i);
-                            }else if(dueloJogador2.get(i).getTipo().equalsIgnoreCase("encantamento")){
+                            } if(dueloJogador2.get(i).getTipo().equalsIgnoreCase("encantamento")){
                                 encantamentoDuelo2 = (Encantamento) dueloJogador2.get(i);
                             }
                         }
@@ -229,8 +229,8 @@ public class Main {
                                 System.out.println("-----------------------------------------------");
                             }
                             else{
-                                System.out.println("o jogador 1 jogou o encantamento " + encantamentoDuelo1 + " pena que ele não foi efetivo! aparentemente ele não faz nada.");
-                                System.out.println("o jogador 2 jogou o encantamento " + encantamentoDuelo2 + " FOI SUPER EFETIVO, causou 20 de dano no jogador inimigo!");
+                                System.out.println("o jogador 1 jogou o encantamento " + encantamentoDuelo1.getNome() + " pena que ele não foi efetivo! aparentemente ele não faz nada.");
+                                System.out.println("o jogador 2 jogou o encantamento " + encantamentoDuelo2.getNome() + " FOI SUPER EFETIVO, causou 20 de dano no jogador inimigo!");
                                 vidaJogador1 -= 50;
                             }
                             contador++;
