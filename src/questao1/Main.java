@@ -149,9 +149,9 @@ public class Main {
                         String tipoCarta2 = leitor.nextLine();
 
                         if(adicionarCarta1(nomeCarta1, custoCarta1, tipoCarta1, tipoCarta1, cartasDeck1, trocasCadastradas) && adicionarCarta2(nomeCarta2, custoCarta2, tipoCarta2, tipoCarta2, cartasDeck2, trocasCadastradas)){
-                            System.out.println("A possibilidade de troca foi cadastrada!");
+                            System.out.println("\nA possibilidade de troca foi cadastrada!");
                         }else{
-                            System.out.println("foi adicionada na troca uma carta não cadastrada.");
+                            System.out.println("\nfoi adicionada na troca uma carta não cadastrada.");
                         }
 
                         for(int i =0 ; i<trocasCadastradas.size(); i++){
