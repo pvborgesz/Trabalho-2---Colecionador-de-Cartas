@@ -264,7 +264,7 @@ public class Main {
                 }
             } while (op != 0);
         } catch (InputMismatchException e) {
-            System.out.println("deu erro com essa coisa ai -> " + e.getClass());
+            System.out.println("deu erro na entrada de dados, tente inserir corretamente-> " + e.getClass());
         }
     }
 
